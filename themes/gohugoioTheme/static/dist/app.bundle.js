@@ -1186,7 +1186,7 @@ module.exports = E;
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/*! docsearch 2.4.1 | © Algolia | github.com/algolia/docsearch */
+/*! docsearch 2.3.3 | © Algolia | github.com/algolia/docsearch */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(true)
 		module.exports = factory();
@@ -1747,6 +1747,17 @@ function localstorage(){
 
 /***/ }),
 /* 7 */
+/***/ (function(module, exports) {
+
+var toString = {}.toString;
+
+module.exports = Array.isArray || function (arr) {
+  return toString.call(arr) == '[object Array]';
+};
+
+
+/***/ }),
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var foreach = __webpack_require__(2);
@@ -1761,7 +1772,7 @@ module.exports = function map(arr, fn) {
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1865,7 +1876,7 @@ module.exports = css;
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1971,17 +1982,6 @@ function bindContext(fn, context) {
     fn.bind(context) :
     function() { fn.apply(context, [].slice.call(arguments, 0)); };
 }
-
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports) {
-
-var toString = {}.toString;
-
-module.exports = Array.isArray || function (arr) {
-  return toString.call(arr) == '[object Array]';
-};
 
 
 /***/ }),
@@ -3650,7 +3650,7 @@ module.exports = "0.28.0";
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = '2.4.1';
+exports.default = '2.3.3';
 
 /***/ }),
 /* 19 */
@@ -3778,8 +3778,8 @@ function AlgoliaSearchCore(applicationID, apiKey, opts) {
   var debug = __webpack_require__(6)('algoliasearch');
 
   var clone = __webpack_require__(4);
-  var isArray = __webpack_require__(10);
-  var map = __webpack_require__(7);
+  var isArray = __webpack_require__(7);
+  var map = __webpack_require__(8);
 
   var usage = 'Usage: algoliasearch(applicationID, apiKey, opts)';
 
@@ -4241,8 +4241,8 @@ AlgoliaSearchCore.prototype._computeRequestHeaders = function(additionalUA, with
  * @return {Promise|undefined} Returns a promise if no callback given
  */
 AlgoliaSearchCore.prototype.search = function(queries, opts, callback) {
-  var isArray = __webpack_require__(10);
-  var map = __webpack_require__(7);
+  var isArray = __webpack_require__(7);
+  var map = __webpack_require__(8);
 
   var usage = 'Usage: client.search(arrayOfQueries[, callback])';
 
@@ -4871,8 +4871,8 @@ IndexCore.prototype.getObject = function(objectID, attrs, callback) {
 * @param objectIDs the array of unique identifier of objects to retrieve
 */
 IndexCore.prototype.getObjects = function(objectIDs, attributesToRetrieve, callback) {
-  var isArray = __webpack_require__(10);
-  var map = __webpack_require__(7);
+  var isArray = __webpack_require__(7);
+  var map = __webpack_require__(8);
 
   var usage = 'Usage: index.getObjects(arrayOfObjectIDs[, callback])';
 
@@ -5586,8 +5586,8 @@ var datumKey = 'aaDatum';
 var _ = __webpack_require__(0);
 var DOM = __webpack_require__(1);
 var html = __webpack_require__(14);
-var css = __webpack_require__(8);
-var EventEmitter = __webpack_require__(9);
+var css = __webpack_require__(9);
+var EventEmitter = __webpack_require__(10);
 
 // constructor
 // -----------
@@ -5845,9 +5845,9 @@ module.exports = Dataset;
 
 var _ = __webpack_require__(0);
 var DOM = __webpack_require__(1);
-var EventEmitter = __webpack_require__(9);
+var EventEmitter = __webpack_require__(10);
 var Dataset = __webpack_require__(38);
-var css = __webpack_require__(8);
+var css = __webpack_require__(9);
 
 // constructor
 // -----------
@@ -6245,7 +6245,7 @@ specialKeyCodeMap = {
 
 var _ = __webpack_require__(0);
 var DOM = __webpack_require__(1);
-var EventEmitter = __webpack_require__(9);
+var EventEmitter = __webpack_require__(10);
 
 // constructor
 // -----------
@@ -6587,7 +6587,7 @@ var EventBus = __webpack_require__(13);
 var Input = __webpack_require__(40);
 var Dropdown = __webpack_require__(39);
 var html = __webpack_require__(14);
-var css = __webpack_require__(8);
+var css = __webpack_require__(9);
 
 // constructor
 // -----------
@@ -7545,8 +7545,6 @@ var DocSearch = function () {
     } : _ref$autocompleteOpti,
         _ref$transformData = _ref.transformData,
         transformData = _ref$transformData === undefined ? false : _ref$transformData,
-        _ref$queryHook = _ref.queryHook,
-        queryHook = _ref$queryHook === undefined ? false : _ref$queryHook,
         _ref$handleSelected = _ref.handleSelected,
         handleSelected = _ref$handleSelected === undefined ? false : _ref$handleSelected,
         _ref$enhancedSearchIn = _ref.enhancedSearchInput,
@@ -7564,7 +7562,6 @@ var DocSearch = function () {
       algoliaOptions: algoliaOptions,
       autocompleteOptions: autocompleteOptions,
       transformData: transformData,
-      queryHook: queryHook,
       handleSelected: handleSelected,
       enhancedSearchInput: enhancedSearchInput,
       layout: layout
@@ -7594,7 +7591,7 @@ var DocSearch = function () {
     }
 
     this.autocomplete = (0, _autocomplete2.default)(this.input, autocompleteOptions, [{
-      source: this.getAutocompleteSource(transformData, queryHook),
+      source: this.getAutocompleteSource(transformData),
       templates: {
         suggestion: DocSearch.getSuggestionTemplate(this.isSimpleLayout),
         footer: _templates2.default.footer,
@@ -7626,18 +7623,13 @@ var DocSearch = function () {
      * the Algolia index and call the callbacks with the formatted hits.
      * @function getAutocompleteSource
      * @param  {function} transformData An optional function to transform the hits
-     * @param {function} queryHook An optional function to transform the query
      * @returns {function} Method to be passed as the `source` option of
      * autocomplete
      */
-    value: function getAutocompleteSource(transformData, queryHook) {
+    value: function getAutocompleteSource(transformData) {
       var _this = this;
 
       return function (query, callback) {
-        if (queryHook) {
-          query = queryHook(query) || query;
-        }
-
         _this.client.search([{
           indexName: _this.indexName,
           query: query,
@@ -11697,12 +11689,12 @@ module.exports = toFactory;
 
 /**
  * scrolldir - Vertical scroll direction in CSS
- * @version v1.2.17
+ * @version v1.2.8
  * @link https://github.com/dollarshaveclub/scrolldir.git
  * @author Patrick Fisher <patrick@pwfisher.com>
  * @license MIT
 **/
-!function(t,e){ true?e():"function"==typeof define&&define.amd?define(e):e()}(0,function(){"use strict";function t(){var t=o.scrollY||o.pageYOffset,e=l.timeStamp,i="down"===d?Math.max:Math.min,p=f.offsetHeight-o.innerHeight;if(t=Math.max(0,t),t=Math.min(p,t),c.unshift({y:t,t:e}),c.pop(),t===i(m,t))return v=e,void(m=t);var b=e-u;if(b>v){m=t;for(var w=0;w<a&&(c[w]&&!(c[w].t<b));w+=1)m=i(m,c[w].y)}Math.abs(t-m)>s&&(m=t,v=e,d="down"===d?"up":"down",n.setAttribute(r,d))}function e(e){return l=e,o.requestAnimationFrame(t)}var i={el:document.documentElement,win:window,attribute:"data-scrolldir",dir:"down"},n=void 0,o=void 0,r=void 0,d=void 0,f=document.body,a=32,u=512,s=64,c=Array(a),l=void 0,m=void 0,v=0;!function(t){n=t&&t.el||i.el,o=t&&t.win||i.win,r=t&&t.attribute||i.attribute,d=t&&t.direction||i.dir,t&&!0===t.off?(n.setAttribute(r,"off"),o.removeEventListener("scroll",e)):(m=o.scrollY||o.pageYOffset,n.setAttribute(r,d),o.addEventListener("scroll",e))}()});
+!function(t,e){ true?e():"function"==typeof define&&define.amd?define(e):e()}(0,function(){"use strict";!function(){var t=document.documentElement,e=window,n=document.body,o=Array(32),i="down",d=void 0,r=void 0,a=0,f=function(){var f=e.scrollY,u=d.timeStamp,c="down"===i?Math.max:Math.min,s=n.offsetHeight-e.innerHeight;if(f=Math.max(0,f),f=Math.min(s,f),o.unshift({y:f,t:u}),o.pop(),f===c(r,f))return a=u,void(r=f);var m=u-512;if(m>a){r=f;for(var l=0;l<32&&o[l]&&!(o[l].t<m);l+=1)r=c(r,o[l].y)}Math.abs(f-r)>64&&(r=f,a=u,i="down"===i?"up":"down",t.setAttribute("data-scrolldir",i))},u=function(t){d=t,e.requestAnimationFrame(f)};r=e.scrollY,t.setAttribute("data-scrolldir",i),e.addEventListener("scroll",u)}()});
 
 /***/ })
 /******/ ]);
