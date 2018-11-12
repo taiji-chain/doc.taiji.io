@@ -24,7 +24,7 @@ Some of the terms and concepts are different than others, and most of them shoul
 ### Blockchain
 
 * [Chain Id](/concept/chain-id/)
-* [Sub Chain](/concept/sub-chain/)
+* [Sub Chain](/concept/subchain/)
 * [Inner Chain Transaction](/concept/inner-tx/)
 * [Inter Chain Transaction](/concept/inter-tx/)
 

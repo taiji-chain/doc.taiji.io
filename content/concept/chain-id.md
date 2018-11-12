@@ -24,10 +24,10 @@ When you create your wallet, you will be asked to select the subchain based on y
 
 When you start a transaction signed by your address, the transaction will be routed to the chain-writer instance that is responsible for that subchain. 
 
-When you use the generic client comes with [light-blockchain-4j][], you can choose the subchain on your own. In the future, if your [home bank][] offer you a customized client to create a wallet, the address should always belong to the same subchain operated by the home bank. 
+When you use the generic client comes with [taiji-blockchain][], you can choose the subchain on your own. In the future, if your [home bank][] offer you a customized client to create a wallet, the address should always belong to the same subchain operated by the home bank. 
 
 
-[light-blockchain-4j]: https://github.com/networknt/light-blockchain-4j
+[light-blockchain-4j]: https://github.com/networknt/taiji-blockchain
 [home bank]: /concept/home-bank/
 
 
