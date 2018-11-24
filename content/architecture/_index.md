@@ -24,6 +24,7 @@ Here is a list of architecture decisions for the Taiji Blockchain:
 * [Scalability][]
 * [Microservice][]
 * [Distributed App][]
+* [Event Sourcing][]
 * [Security][]
 * [Cloud Friendly][]
 * [Plugin][]
@@ -33,10 +34,12 @@ Here is a list of architecture decisions for the Taiji Blockchain:
 * [Fail-Fast][]
 
 
+
 [design]: /design/
 [Scalability]: /architecture/scalability/
 [Microservice]: /architecture/microservices/
 [Distributed App]: /architecture/distributed-app/
+[Event Sourcing]: /architecture/event-sourcing/
 [Security]: /architecture/security/
 [Cloud Friendly]: /architecture/cloud-friendly/
 [Plugin]: /architecture/plugin/

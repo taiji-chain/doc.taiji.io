@@ -137,35 +137,41 @@ twitter = "networkntcom"
   url = "/design/"
 
 [[menu.docs]]
-  name = "API"
+  name = "APIs"
   weight = 20
   identifier = "api"
   post = "expanded"
   url = "/api/"
 
 [[menu.docs]]
-  name = "Client"
+  name = "Clients"
   weight = 25
   identifier = "client"
   url = "/client/"
 
 [[menu.docs]]
-  name = "Concept"
-  weight = 30
-  identifier = "concept"
-  url = "/concept/"
+  name = "Plugins"
+  weight = 28
+  identifier = "plugin"
+  url = "/plugin/"
 
 [[menu.docs]]
-  name = "Tool Chain"
-  weight = 35
+  name = "Templates"
+  weight = 30
+  identifier = "template"
+  url = "/template/"
+
+[[menu.docs]]
+  name = "Tools"
+  weight = 32
   identifier = "tool"
   url = "/tool/"
 
 [[menu.docs]]
-  name = "Plugins"
-  weight = 40
-  identifier = "plugin"
-  url = "/plugin/"
+  name = "Concept"
+  weight = 35
+  identifier = "concept"
+  url = "/concept/"
 
 # LOW LEVEL ITEMS
 
