@@ -27,6 +27,8 @@ For every transaction on the blockchain, there is always debit (Yin) and credit 
 
 * For users who are looking for a fast and low-cost cryptocurrency for everyday transactions. 
 
+* For users who are interesting in the distributed applications provided by the public chain. 
+
 * For merchants who are looking for a service provider for low cost batched payment solutions.
 
 * For financial institutions to join the network as a bank to operate a subchain. 
