@@ -15,7 +15,7 @@ draft: false
 reviewed: true
 ---
 
-Currently, there is one Java command line console and a [demo web client][] available to interact with the taiji blockchain, and we are working on other clients at the moment. 
+Currently, there is one Java command line console and a [demo web client][] available to interact with the taiji blockchain, and we are working on other clients at the moment. If this is your first time, please use the web-client on the cloud to get started. 
 
 There three ways to run the command line console. 
 
