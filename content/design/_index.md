@@ -14,4 +14,5 @@ toc: false
 draft: false
 ---
 
-To be written
+[Privacy](/design/privacy/)
+

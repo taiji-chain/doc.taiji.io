@@ -1,5 +1,5 @@
 ---
-title: "Distributed Application Templates"
+title: "Distributed Applications"
 date: 2018-11-12T14:44:00-05:00
 description: ""
 categories: []
@@ -15,10 +15,9 @@ To build and deploy distributed applications on Taiji Blockchain is very similar
 
 Here is the list all the application templates provided by the community. 
 
-- [ERC20 Token](/template/erc20-token/)
-- [Authentication and Authorization](/template/id-auth/)
-- [KYC - Know Your Client](/template/kyc/)
-- [Reference Data](/template/reference/)
-- [Host Menu](/template/host-menu/)
-- [Schema Form](/template/schema-form/)
-
+- [ERC20 Token](/application/taiji-token/)
+- [Authentication and Authorization](/application/id-auth/)
+- [KYC - Know Your Client](/application/taiji-kyc/)
+- [Value Evaluation](/application/taiji-evaluation/)
+- [Reference Data](/application/reference-data/)
+- [Inventory Tracker](/application/inventory-tracker/)

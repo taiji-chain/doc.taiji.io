@@ -156,10 +156,10 @@ twitter = "networkntcom"
   url = "/plugin/"
 
 [[menu.docs]]
-  name = "Templates"
+  name = "Applications"
   weight = 30
-  identifier = "template"
-  url = "/template/"
+  identifier = "application"
+  url = "/application/"
 
 [[menu.docs]]
   name = "Tools"
