@@ -15,4 +15,5 @@ draft: false
 ---
 
 [Privacy](/design/privacy/)
+[Snapshot](/design/snapshot/)
 
