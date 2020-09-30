@@ -1,2 +1,5 @@
-.idea
+/.idea
+/public
 nohup.out
+.DS_Store
+trace.out
