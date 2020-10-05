@@ -7,10 +7,6 @@ publishdate: 2018-02-01
 lastmod: 2018-03-02
 categories: ["about taiji"]
 keywords: ["License","apache"]
-menu:
-  docs:
-    parent: "about"
-    weight: 60
 weight: 60
 sections_weight: 60
 aliases: []

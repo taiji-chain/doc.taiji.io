@@ -4,10 +4,6 @@ date: 2018-02-25T09:01:05-05:00
 description: ""
 categories: []
 keywords: []
-menu:
-  docs:
-    parent: "about"
-    weight: 30
 weight: 30
 sections_weight: 30
 aliases: []

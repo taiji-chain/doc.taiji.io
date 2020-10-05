@@ -6,10 +6,6 @@ date: 2018-02-01
 publishdate: 2018-02-01
 lastmod: 2018-02-01
 layout: single
-menu:
-  docs:
-    parent: "about"
-    weight: 10
 weight: 10
 sections_weight: 10
 draft: false

@@ -8,6 +8,7 @@ slug: ""
 aliases: []
 toc: false
 draft: false
+reviewed: true
 ---
 
 It is the first application we want to provide as we need a light token to attract people to help the Light Platform and Taiji Blockchain community. For every contribution, we are going to pay with a certain amount of LIGHT tokens. The token doesn't have any monetary value, and it represents the value each contributor brings to the community. The tokens can be transferred to any valid address, and we reserve the right to convert these tokens with cryptocurrencies or fiat currencies in the future. 
